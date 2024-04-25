@@ -1,0 +1,281 @@
+/*--------------------------------------------------------------
+SCREEN READER/ACCESSIBILITY
+--------------------------------------------------------------*/
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+/*--------------------------------------------------------------
+GENERAL
+--------------------------------------------------------------*/
+
+html {
+	background: url(../images/multistars.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.site {
+	grid-template-columns: 0.5fr 1.5fr 1.5fr 0.5fr;
+	grid-template-rows: auto;
+}
+
+.bottom-button {
+	text-align: center;
+	color: #ffffff;
+}
+
+/*--------------------------------------------------------------
+NAVIGATION BAR
+--------------------------------------------------------------*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Bebas Neue", sans-serif;
+}
+nav {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 75px;
+	background: #000000;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .navbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	max-width: 90%;
+	background: #000000;
+	margin: auto;
+}
+nav .navbar .logo a {
+	color: #fff;
+	font-size: 27px;
+	font-weight: 600;
+	text-decoration: none;
+}
+nav .navbar .menu {
+	display: flex;
+}
+.navbar .menu li {
+	list-style: none;
+	margin: 0 15px;
+}
+.navbar .menu li a {
+	color: #fff;
+	font-size: 17px;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.button a {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	color: #fff;
+	background: #000000;
+	padding: 7px 12px;
+	font-size: 18px;
+	border-radius: 6px;
+	box-shadow: rgba(0, 0, 0, 0.15);
+}
+
+/*--------------------------------------------------------------
+BODY
+--------------------------------------------------------------*/
+
+/*---------- FEAUTURE -----------*/
+
+.feature {
+	margin-top: 2em;
+	border-radius: 10px;
+}
+
+/*---------- SUBHEADER -----------*/
+
+.subheader {
+	padding-bottom: 2em;
+	border-radius: 10px;
+	margin-top: -2em;
+	padding: 0 1.5em 0 1.5em;
+}
+
+.subheader-content {
+	color: #ffffff;
+}
+
+/*---------- BOTTOM BUTTON -----------*/
+
+.bottom-button {
+	margin: 2em 0 1.5em 0;
+	border: 0.2em solid;
+	border-color: #ffffff;
+	background-color: white;
+}
+
+.bottom-button a {
+	text-decoration: none;
+	color: #000000;
+	font-size: 2em;
+}
+
+/*--------------------------------------------------------------
+GENERAL FONTS
+--------------------------------------------------------------*/
+
+body {
+	margin: 0;
+	font-family: "Source Sans Pro", "Helvetica", "Arial", sans-serif;
+	font-size: 18px;
+	line-height: 1.5;
+	color: #ffffff;
+}
+
+/*--------------------------------------------------------------
+GENERAL STYLE
+--------------------------------------------------------------*/
+
+h1,
+h2,
+h3 {
+	text-align: center;
+	font-size: 3em;
+	margin: 0;
+	padding-bottom: 0.3em;
+}
+
+p {
+	text-align: center;
+	font-size: 1.3em;
+}
+
+img {
+	display: block;
+	border: 0;
+	width: 100%;
+	height: auto;
+}
+
+/*--------------------------------------------------------------
+FOOTER
+--------------------------------------------------------------*/
+.footer {
+	padding: 2em;
+	background: #000000;
+	color: white;
+	text-align: center;
+}
+
+.footer a {
+	color: white;
+}
+
+.footer a:hover,
+.footer a:focus {
+	border-bottom: 1px solid white;
+}
+
+/*--------------------------------------------------------------
+MEDIA QUERIES AND SUPPORT
+--------------------------------------------------------------*/
+
+@supports (grid-area: auto) {
+	@media screen and (min-width: 65em) {
+		.site {
+			grid-template-columns: 7em auto 7em;
+		}
+
+		.footer {
+			grid-column: 1/4;
+		}
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.subheader-text {
+		columns: 1;
+		column-gap: 2em;
+	}
+
+	nav .navbar .logo a {
+		color: #fff;
+		font-size: 1.8em;
+		font-weight: 600;
+		text-decoration: none;
+	}
+
+	.navbar .menu li a {
+		color: #fff;
+		font-size: 1.3em;
+		font-weight: 500;
+		text-decoration: none;
+	}
+
+	.feature {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 10px;
+		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.feature img {
+		max-width: 100%;
+		height: auto;
+	}
+	.bottom-button {
+		margin: 7em 2.5em 5em 2.5em;
+		border-color: #ffffff;
+		background-color: white;
+	}
+
+	.bottom-button a {
+		text-decoration: none;
+		color: #000000;
+		font-size: 2em;
+	}
+
+	h2 {
+		font-size: 5em;
+	}
+
+	.subheader-text p {
+		padding-top: 0;
+		font-size: 3em;
+	}
+}
